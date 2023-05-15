@@ -20,7 +20,7 @@ def main():
     # Retrieve user addresses
     user_addresses = api.get_user_addresses(email)
     addresses_text = "\n".join([f"Address: {addr}" for addr in user_addresses])
-    addresses_text_area = TextArea(text=f"Addresses:\n{addresses_text}")
+    addresses_text_area = TextArea(text=f"Addresses:\n{addresses_text}@omg.lol")
 
         
     # Retrieve user sessions
@@ -33,7 +33,6 @@ def main():
     if account_settings:
         account_settings_area = TextArea(text=f"Account Settings: {account_settings}")
     kb = KeyBindings()
-
     @kb.add('q')
     def _(event):
         " Quit when 'q' is pressed. "
